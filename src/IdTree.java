@@ -1,8 +1,10 @@
 public class IdTree {
+
     private class TreeNode {
         String id;
         Student data;
         TreeNode left, right;
+
         TreeNode(Student s) {
             this.id = s.getId();
             this.data = s;
@@ -11,6 +13,7 @@ public class IdTree {
     }
 
     private TreeNode root;
+
     public void insert(Student s) {
         root = insertRec(root, s);
     }
@@ -21,6 +24,7 @@ public class IdTree {
         else if (s.getId().compareTo(root.id) > 0) root.right = insertRec(root.right, s);
         return root;
     }
+
     public Student search(String id) {
         return searchRec(root, id);
     }
@@ -47,18 +51,21 @@ public class IdTree {
         else {
             if (root.left == null) return root.right;
             else if (root.right == null) return root.left;
-            root.id = minValue(root.right);
-            root.right = deleteRec(root.right, root.id);
+
+            TreeNode successor = findMin(root.right);
+
+            root.id = successor.id;
+            root.data = successor.data;
+
+            root.right = deleteRec(root.right, successor.id);
         }
         return root;
     }
 
-    private String minValue(TreeNode root) {
-        String minv = root.id;
+    private TreeNode findMin(TreeNode root) {
         while (root.left != null) {
-            minv = root.left.id;
             root = root.left;
         }
-        return minv;
+        return root;
     }
 }
