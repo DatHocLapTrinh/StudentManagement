@@ -13,19 +13,19 @@ public class StudentManager {
     public static void main(String[] args) {
         initializeData();
         while (true) {
-            System.out.println("\n=================================================");
-            System.out.println("|       🎓  STUDENT MANAGEMENT SYSTEM  🎓      |");
-            System.out.println("=================================================");
-            System.out.println("|  1. [+] Add New Student                       |");
-            System.out.println("|  2. [!] Edit Student Information              |");
-            System.out.println("|  3. [-] Delete Student                        |");
-            System.out.println("|  4. [?] Search Student                        |");
-            System.out.println("|  5. [^] Sort by Marks                         |");
-            System.out.println("|  6. [*] Show All Students                     |");
-            System.out.println("|  7. [z] Undo Delete                           |");
-            System.out.println("|  8. [h] Show Activity Log                     |");
-            System.out.println("|  9. [x] Exit System                           |");
-            System.out.println("=================================================");
+            System.out.println("\n=============================================");
+            System.out.println("|     🎓  STUDENT MANAGEMENT SYSTEM  🎓    |");
+            System.out.println("=============================================");
+            System.out.println("|  1. Add New Student                       |");
+            System.out.println("|  2. Edit Student Information              |");
+            System.out.println("|  3. Delete Student                        |");
+            System.out.println("|  4. Search Student                        |");
+            System.out.println("|  5. Sort by Marks                         |");
+            System.out.println("|  6. Show All Students                     |");
+            System.out.println("|  7. Undo Delete                           |");
+            System.out.println("|  8. Show Activity Log                     |");
+            System.out.println("|  9. Exit System                           |");
+            System.out.println("=============================================");
             System.out.print(">> Please enter your choice: ");
             int choice;
             try {
